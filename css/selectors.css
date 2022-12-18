@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+.debug * {
+    outline: 1px solid orange;
+}
+body {
+    background-color: #ededed;
+    font-family: arial,sans-serif;
+}
+
+/* Match elements with both classes */
+
+/* .cls1.cls2 {
+    background-color: lightgray;
+} */
+
+/* h3 + p {
+    background-color: lightgray;
+} */
+
+/* h3 + p > span{
+    background-color: lightgray;
+} */
+
+/* h3 + p + p + p + p{
+    background-color: lightgray;
+} */
+
+/* h2 + p::first-letter {
+    color: darkcyan;
+    font-weight: bold;
+    font-size: 2em;
+} */
+
+/* h3 + p::first-line {
+    color: rgb(235, 225, 115);
+    font-weight: bold;
+} */
+
+/*
+ :Note that, in the element:nth-child() syntax, 
+ :the child count includes children of any element type; 
+ :but it is considered a match only if 
+ :the element at that child position is of the 
+ :specified element type.
+*/
+
+/* 
+    Match any element which is a 3rd child 
+    of a section or of **ANY** other element inside a section
+*/
+
+/* section :nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any **PARAGRAPH** which is a 3rd child 
+    of a section or of **ANY** other element inside a section
+*/
+
+/* section p:nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any element which is a 3rd child 
+    inside a paragraph which is inside a section 
+*/
+
+/* section p :nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any span or h3 which are a 3rd child 
+    of a section or of **ANY** other element inside a section
+*/
+
+/* section :is(span, h3):nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any element which is a 3rd **DIRECT** child 
+    of a section
+*/
+
+/* section > :nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any span or h3 which are a 3rd **DIRECT** child 
+    of a section
+*/
+
+/* section > :is(span, h3):nth-child(3n){
+    background-color: lightgray;
+} */
+
+/* 
+    Match any p which are directly after an h2 or h3
+    inside a section
+*/
+
+/* section :is(h2, h3) + p{
+    background-color: lightgray;
+} */

@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    cursor: pointer;
+}
+
+div {
+    font-family: monospace;
+    border-block-start: 10px solid lightgrey;
+}
+
+span{
+    font-family: monospace;
+    font-size: .8em;
+}
+
+/* : Helper class */
+
+.center-text {
+    text-align: center;
+}
+
+/* :<h1> inside a <div> */
+
+/* #h1-in-div{
+    background-color: rgb(97, 132, 167);
+} */
+
+/* div.heading-container .spe-ci-fi-ci-ty {
+    background-color: darkseagreen;
+} */
+
+/* div.heading-container h1 {
+    background-color: beige;
+} */
+
+.heading-container h1 {
+    background-color: rosybrown;
+}   
+
+/* : <h1> outside any <div>  */
+
+/* #h1-outside-div{
+    background-color: rgb(97, 132, 167);
+} */
+
+h1.spe-ci-fi-ci-ty {
+    background-color: rgb(175, 209, 65);
+}
+
+.spe-ci-fi-ci-ty{
+    background-color: lightseagreen;
+}
+
+h1{
+    padding: 40px;
+    background-color: lightblue;
+    /* background-color: lightblue !important; */
+}

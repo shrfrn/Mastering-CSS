@@ -1,0 +1,164 @@
+body{
+    accent-color: #333;
+    background-color: #eee;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    margin-bottom: 100px;
+}
+button{
+    margin-bottom: 16px;
+}
+label{
+    font-size: 10px;
+    margin-left: .5em;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+
+    width: 90%;
+    margin: 30px auto 0;
+}
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
+
+    justify-self: center;
+    width: min-content;
+    height: min-content;
+
+    border-bottom: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+
+    --rotate-x: 0;
+    --rotate-y: 0;
+    --rotate-z: 0;
+    
+    --skew-x: 0;
+    --skew-y: 0;
+
+    transform: 
+        rotateX(var(--rotate-x)) 
+        rotateY(var(--rotate-y)) 
+        rotateZ(var(--rotate-z)) 
+        skewX(var(--skew-x)) 
+        skewY(var(--skew-y)); 
+}
+/* input[type=range]:focus {
+    outline: none; 
+} */
+label{
+    display: block;
+}
+.grid-table div {
+    border-top: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+.grid-table div:hover {
+    background-color: lightgray;
+}
+.center{
+    grid-area: 3 / 3 / 4 / 4;
+}
+.square {
+    grid-area: 3 / 3 / 4 / 4;
+    background-color: darkseagreen;
+    transition: 1s;
+}
+
+/* Row 1 */
+
+/* html:has(.top-top-left-left:hover) .square{
+    transform: translate(-200%, -200%);
+} */
+/* .grid-table :nth-child(1):hover ~ .square{
+    transform: translate(-200%, -200%);
+} */
+
+.top-top-left-left:hover ~ .square {
+    transform: translate(-200%, -200%);
+}
+.top-top-left:hover ~ .square {
+    transform: translate(-100%, -200%);
+}
+.top-top:hover ~ .square {
+    transform: translate(0, -200%);
+}
+.top-top-right:hover ~ .square {
+    transform: translate(100%, -200%);
+}
+.top-top-right-right:hover ~ .square {
+    transform: translate(200%, -200%);
+}
+
+/* Row 2 */
+
+.top-left-left:hover ~ .square {
+    transform: translate(-200%, -100%);
+}
+.top-left:hover ~ .square {
+    transform: translate(-100%, -100%);
+}
+.top:hover ~ .square {
+    transform: translate(0, -100%);
+}
+.top-right:hover ~ .square {
+    transform: translate(100%, -100%);
+}
+.top-right-right:hover ~ .square {
+    transform: translate(200%, -100%);
+}
+
+/* Row 3 */
+
+.left:hover ~ .square {
+    transform: translate(-100%, 0);
+}
+.left-left:hover ~ .square {
+    transform: translate(-200%, 0);
+}
+.right:hover ~ .square {
+    transform: translate(100%, 0);
+}
+.right-right:hover ~ .square {
+    transform: translate(200%, 0);
+}
+
+/* Row 4 */
+
+.bottom-left-left:hover ~ .square {
+    transform: translate(-200%, 100%)
+}
+.bottom-left:hover ~ .square {
+    transform: translate(-100%, 100%)
+}
+.bottom:hover ~ .square {
+    transform: translate(0, 100%)
+}
+.bottom-right:hover ~ .square {
+    transform: translate(100%, 100%)
+}
+.bottom-right-right:hover ~ .square {
+    transform: translate(200%, 100%)
+}
+
+/* Row 5 */
+
+.bottom-bottom-left-left:hover ~ .square {
+    transform: translate(-200%, 200%)
+}
+.bottom-bottom-left:hover ~ .square {
+    transform: translate(-100%, 200%)
+}
+.bottom-bottom:hover ~ .square {
+    transform: translate(0, 200%)
+}
+.bottom-bottom-right:hover ~ .square {
+    transform: translate(100%, 200%)
+}
+.bottom-bottom-right-right:hover ~ .square {
+    transform: translate(200%, 200%)
+}

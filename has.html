@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d07d44a57c.js" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="css/has.css">
+    <title>:has() selector</title>
+</head>
+<body>
+    <section class="grid-container">
+        <section class="options">
+
+            <fieldset class="transform-origin">
+                <legend>Transform origin</legend>
+    
+                <input id="top-left" type="radio" name="layout" value="1">
+                <label for="top-left">Top Left</label>
+    
+                <input id="top-right" type="radio" name="layout" value="2">
+                <label for="top-right">Top Right</label>
+    
+                <input id="center" type="radio" checked name="layout" value="3">
+                <label for="center">Center</label>
+    
+                <input id="bottom-left" type="radio" name="layout" value="4">
+                <label for="bottom-left">Bottom Left</label>
+    
+                <input id="bottom-right" type="radio" name="layout" value="5">
+                <label for="bottom-right">Bottom Right</label>
+    
+            </fieldset>
+            <fieldset>
+                <legend>Spread</legend>
+                    <input type="radio" id="x-small" name="spread">
+                    <label for="x-small">x-small</label>
+                    
+                    <input type="radio" id="small" name="spread">
+                    <label for="small">small</label>
+                    
+                    <input type="radio" id="medium" name="spread" checked>
+                    <label for="medium">medium</label>
+                    
+                    <input type="radio" id="large" name="spread">
+                    <label for="large">large</label>
+                    
+                    <input type="radio" id="x-large" name="spread">
+                    <label for="x-large">x-large</label>
+                    
+            </fieldset>
+
+            <!-- <fieldset>
+                <legend>Spread slider</legend>
+                <input oninput="setSpread(this)" type="range" min="1" max="5" value="3">
+            </fieldset> -->
+
+        </section>
+
+        <div class="card card1"><i class="icon fa-solid fa-heart"></i></div>
+        <div class="card card2"><i class="icon fa-brands fa-vuejs"></i></div>
+        <div class="card card3"><i class="icon fa-solid fa-gear"></i></div>
+        <div class="card card4"><i class="icon fa-solid fa-yin-yang"></i></div>
+        <div class="card card5"><i class="icon fa-solid fa-microphone"></i></div>
+    </section>
+    <script>
+        function setSpread(elSlider){
+            const elGrid = document.querySelector('.grid-container')
+            elGrid.style.setProperty('--spread-amount', elSlider.value)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    border: 8px solid rgba(67, 148, 192, 0.1);
+    border-block-start: 8px solid rgba(67, 148, 192, 1);
+
+    animation: spin 2000ms linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background-color: rgba(47, 79, 79, 0.754);
+    
+    animation: pulse 600ms ease-out alternate infinite;
+    
+}
+
+@keyframes pulse {
+    to {
+        opacity: 0;
+    }
+}

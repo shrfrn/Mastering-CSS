@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(108, 151, 177);
+    color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+
+    width: min-content;
+    margin: 100px auto 0;
+
+    border-left: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+.cell{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+
+    border-top: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+
+/* Change the selector value and see it's effect... */
+.cell:nth-child(3n + 1){
+    background-color: rgb(206, 151, 74);
+}

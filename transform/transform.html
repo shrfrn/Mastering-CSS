@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/transform.css" />
+        <title>Transform Functions</title>
+    </head>
+    <body>
+        <h1>Transform Functions</h1>
+        
+        <div class="container">
+            <section class="controls">
+                <button class="reset" onclick="resetProperties()">Reset</button>
+                <label for="rotate-x">Rotate X</label>
+                <input
+                    type="range"
+                    name="rotate-x"
+                    min="-45"
+                    max="45"
+                    oninput="setProperty(this, '--rotate-x')"
+                />
+
+                <label for="rotate-y">Rotate Y</label>
+                <input
+                    type="range"
+                    name="rotate-y"
+                    min="-45"
+                    max="45"
+                    oninput="setProperty(this, '--rotate-y')"
+                />
+
+                <label for="rotate-z">Rotate Z</label>
+                <input
+                    type="range"
+                    name="rotate-z"
+                    min="-45"
+                    max="45"
+                    oninput="setProperty(this, '--rotate-z')"
+                />
+
+                <label for="skew-x">Skew X</label>
+                <input
+                    type="range"
+                    name="skew-x"
+                    min="-45"
+                    max="45"
+                    oninput="setProperty(this, '--skew-x')"
+                />
+
+                <label for="skew-y">Skew Y</label>
+                <input
+                    type="range"
+                    name="skew-y"
+                    min="-45"
+                    max="45"
+                    oninput="setProperty(this, '--skew-y')"
+                />
+            </section>
+
+            <div class="grid-table">
+                <div class="top-top-left-left"></div>
+                <div class="top-top-left"></div>
+                <div class="top-top"></div>
+                <div class="top-top-right"></div>
+                <div class="top-top-right-right"></div>
+
+                <div class="top-left-left"></div>
+                <div class="top-left"></div>
+                <div class="top"></div>
+                <div class="top-right"></div>
+                <div class="top-right-right"></div>
+
+                <div class="left-left"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="right-right"></div>
+
+                <div class="bottom-left-left"></div>
+                <div class="bottom-left"></div>
+                <div class="bottom"></div>
+                <div class="bottom-right"></div>
+                <div class="bottom-right-right"></div>
+
+                <div class="bottom-bottom-left-left"></div>
+                <div class="bottom-bottom-left"></div>
+                <div class="bottom-bottom"></div>
+                <div class="bottom-bottom-right"></div>
+                <div class="bottom-bottom-right-right"></div>
+
+                <div class="center"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+        <script src="js/transform.js"></script>
+    </body>
+</html>

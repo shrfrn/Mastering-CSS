@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+@font-face {
+    font-family: 'fa-solid';
+    font-display: block;
+    font-weight: 900;
+    src: url("../../fonts/fa/fa-solid-900.ttf") format("truetype"); 
+}
+  
+@font-face {
+    font-family: 'montserrat-black';
+    font-display: block;
+    font-weight: 900;
+    src: url("../../fonts/Montserrat/Montserrat-Black.ttf") format("truetype"); 
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    height: 5vh;
+    background-color: #ccc;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+header div {
+    margin-inline-start: 1em;
+    font-family: 'fa-solid';
+}
+
+h1 {
+    font-family: 'Blaka', cursive;
+}
+
+p{
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'montserrat-black', sans-serif; */
+}
+
+.logo::before {
+    content: '\f004';
+    font-size: 2em;
+}
+
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon.fa-login::before {
+    content: '\f2f6';
+}
+
+.icon.fa-logout::before {
+    content: '\f2f5';
+}
+
+.icon.fa-cart::before {
+    content: '\f07a';
+}

@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: lightskyblue;
+    font-family: monospace;
+}
+
+
+div{
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 100px auto 0;
+    background-color: darkseagreen;
+    border: 2px solid orange;
+}
+.box{
+    animation-name: simple-animation;
+    animation-duration: 8s;
+}
+.circle{
+    border-radius: 50%;
+    
+    animation-name: simple-animation;
+    animation-delay: 3s;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+}
+
+/*
+// 1. Animate more properties (opacity, border-width, etc..)
+// 2. Add more @keyframes
+// 3. Add the animation to the circle.
+// 4. Change the circle's animation duration.
+// 5. Add a delay to the circle's animation.
+// 6. Add iteration-count and direction.
+*/
+@keyframes simple-animation {
+    25% {
+        width: 250px;
+        height: 250px;
+    }
+    50% {
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        border-width: 20px;
+    }
+    75% {
+        width: 250px;
+        height: 250px;
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-clr: rgb(30, 30, 30);
+    --quote-clr: rgba(133, 133, 133, 0.522);
+    --notes-clr: rgb(148, 167, 160);
+    --p-before-clr: rgb(255, 192, 19);
+    --p-after-clr: rgb(96, 198, 231);
+}
+
+body {
+    background-color: #ededed;
+    color: var(--text-clr);
+    font-family: arial,sans-serif;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 3em;
+    text-align: center;
+}
+
+p {
+    position: relative;
+    margin-inline-start: 1em;
+}
+
+/* h2 + p::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1em;
+    
+    width: 10px;
+    background-color: var(--p-before-clr);
+} */
+
+/* h2::after {
+    padding-inline-start: 1em;
+    content: attr(data-notes);
+    color: var(--notes-clr);
+} */
+
+/* p:not(:nth-of-type(2))::after {
+    content: '';
+
+    position: absolute;
+    bottom: 3px;
+
+    width: .6em;
+    height: .6em;
+    
+    margin-inline-start: 1em;
+    background-color: var(--p-after-clr);
+    border-radius: 50%;
+} */
+
+/* p:nth-of-type(2){
+    width: 70%;
+    max-width: 600px;
+    margin: 2em auto;
+    color: var(--quote-clr);
+    font-style: italic;
+    padding-inline-start: 2em;
+} */
+
+/* p:nth-of-type(2)::before{
+    content: open-quote;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    color: var(--p-quote-clr);
+    font-size: 4em;
+}
+
+p:nth-of-type(2)::after{
+    content: close-quote;
+    position: absolute;
+    color: var(--p-quote-clr);
+    font-size: 4em;
+} */

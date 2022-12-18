@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    accent-color: #333;
+    background-color: #ededed;
+    font-family: arial,sans-serif;
+}
+
+.grid-container{
+    --translate-dir: 1;
+    --spread-amount: 3;
+
+    --clr1: hsl(194, 100%, 28%);
+    --clr2: hsl(36, 99%, 47%);
+    --clr3: hsl(198, 33%, 76%);
+    --clr4: hsl(81, 49%, 53%);
+    --clr5: hsl(192, 67%, 55%);
+
+    --border-radius: 10px;
+    --label-margin: 10px;
+            
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5vw;
+
+    width: 70vw;
+    min-height: 50vh;
+    margin: 15vh auto;
+}
+.options{
+    display: grid;
+    gap: 20px;
+    align-content: space-between;
+}
+fieldset {
+    display: grid;
+    justify-content: start;
+
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+fieldset > label{
+    grid-column: 2;
+    margin: var(--label-margin);
+}
+.card {
+    --transition-duration: .5s;
+    position: relative;
+    grid-area: 1 / 2;
+    aspect-ratio: 3 / 4;
+    opacity: .6;
+    margin: 50px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease-in-out;
+}
+.card .icon {
+    --icon-padding: 10px;
+
+    position: absolute;
+    color: lightgrey;
+    font-size: 1.6em;
+}
+html:has(#top-left:checked) .card{
+    --translate-dir: -1;
+    transform-origin: top left;
+}
+html:has(#top-left:checked) .icon{
+    bottom: var(--icon-padding);
+    right: var(--icon-padding);
+    animation: card-1 calc(var(--transition-duration) * 2) ease-in;
+}
+html:has(#top-right:checked) .card{
+    --translate-dir: -1;
+    transform-origin: top right;
+}
+html:has(#top-right:checked) .icon{
+    bottom: var(--icon-padding);
+    left: var(--icon-padding);
+    animation: card-2 calc(var(--transition-duration) * 2) ease-in;
+}
+html:has(#center:checked) .card{
+    --translate-dir: 1;
+    transform-origin: center;
+}
+html:has(#center:checked) .icon{
+    top: var(--icon-padding);
+    left: var(--icon-padding);
+    animation: card-3 calc(var(--transition-duration) * 2) ease-in;
+}
+html:has(#bottom-left:checked) .card{
+    --translate-dir: 1;
+    transform-origin: bottom left;
+}
+html:has(#bottom-left:checked) .icon{
+    top: var(--icon-padding);
+    right: var(--icon-padding);
+    animation: card-4 calc(var(--transition-duration) * 2) ease-in;
+}
+html:has(#bottom-right:checked) .card{
+    --translate-dir: 1;
+    transform-origin: bottom right;
+}
+
+html:has(#bottom-right:checked) .icon{
+    top: var(--icon-padding);
+    left: var(--icon-padding);
+    animation: card-5 calc(var(--transition-duration) * 2) ease-in;
+}
+
+html:has(#x-small:checked) .grid-container{
+    --spread-amount: 1;
+}
+html:has(#small:checked) .grid-container{
+    --spread-amount: 2;
+}
+html:has(#medium:checked) .grid-container{
+    --spread-amount: 3;
+}
+html:has(#large:checked) .grid-container{
+    --spread-amount: 4;
+}
+html:has(#x-large:checked) .grid-container{
+    --spread-amount: 5;
+}
+
+.card1 {
+    background-color: var(--clr1);
+    transform: rotate(calc(-4deg * var(--spread-amount)));
+}
+.card1:hover {
+    transform: 
+        rotate(calc(-4deg * var(--spread-amount))) 
+        translateY(calc(-30px * var(--translate-dir)));
+}
+.card2 {
+    background-color: var(--clr2);
+    transform: rotate(calc(-2deg * var(--spread-amount)));
+}
+.card2:hover {
+    transform: 
+        rotate(calc(-2deg * var(--spread-amount))) 
+        translateY(calc(-30px * var(--translate-dir)));
+}
+.card3 {
+    background-color: var(--clr3);
+}
+.card3:hover {
+    transform: translateY(calc(-30px * var(--translate-dir)));
+}
+.card4 {
+    background-color: var(--clr4);
+    transform: rotate(calc(2deg * var(--spread-amount)));
+}
+.card4:hover {
+    transform: 
+        rotate(calc(2deg * var(--spread-amount))) 
+        translateY(calc(-30px * var(--translate-dir)));
+}
+.card5 {
+    background-color: var(--clr5);
+    transform: rotate(calc(4deg * var(--spread-amount)));
+}
+.card5:hover {
+    transform: 
+        rotate(calc(4deg * var(--spread-amount))) 
+        translateY(calc(-30px * var(--translate-dir)));
+}
+
+@keyframes card-1 {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes card-2 {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes card-3 {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes card-4 {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
+@keyframes card-5 {
+    0%   { opacity: 0 }
+    100% { opacity: 1 }
+}
